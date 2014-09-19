@@ -1,0 +1,6 @@
+.sash-cache
+.sash-cache/*
+_DOCS
+_DOCS/*
+node_modules
+
