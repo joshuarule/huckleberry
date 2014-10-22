@@ -2,6 +2,15 @@
   display: none;
 }
 
+.cf,
+%cf {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
 // layout 
 
 .pull-left  {float: left;}

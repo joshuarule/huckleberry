@@ -52,11 +52,17 @@
 .nav-menu {
   display: block;
   text-align: center;
-  margin-bottom: 100px;
+  padding-top:   60px;
+  margin-bottom: 80px;
 
   ul {
     display: inline-block;
   }
+
+  li {
+    margin-bottom: 20px;
+  }
+
   a {
     @extend %btn;
     background: $black;

@@ -56,14 +56,14 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
 @font-face {
   font-family: DINWeb;
-  src: url('/assets/fonts/din/DINWeb.eot'); }
+  src: url('/assets/fonts/din/DINWeb.eot?1414000021'); }
 @font-face {
   font-family: DINWeb;
-  src: url('/assets/fonts/din/DINWeb.woff') format("woff"); }
+  src: url('/assets/fonts/din/DINWeb.woff?1414000021') format("woff"); }
 @font-face {
   font-family: 'MrsEavesItalicRegular';
-  src: url('/assets/fonts/mrsEaves/mrseavita-080413005EmigreWebOnly.eot');
-  src: url('/assets/fonts/mrsEaves/mrseavita-080413005EmigreWebOnly.eot?#iefix') format("embedded-opentype"), url('/assets/fonts/mrsEaves/mrseavita-080413005EmigreWebOnly.woff') format("woff");
+  src: url('/assets/fonts/mrsEaves/mrseavita-080413005EmigreWebOnly.eot?1414000021');
+  src: url('/assets/fonts/mrsEaves/mrseavita-080413005EmigreWebOnly.eot?&1414000021#iefix') format("embedded-opentype"), url('/assets/fonts/mrsEaves/mrseavita-080413005EmigreWebOnly.woff?1414000021') format("woff");
   font-weight: normal;
   font-style: normal; }
 /* line 27, ../../sass/_config/_grid.scss */
@@ -92,26 +92,36 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: none; }
 
 /* line 7, ../../sass/_helpers/_classes.scss */
+.cf:after,
+section:after,
+.events-list .current-event:after,
+footer small:after,
+.menu-items:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+/* line 16, ../../sass/_helpers/_classes.scss */
 .pull-left {
   float: left; }
 
-/* line 8, ../../sass/_helpers/_classes.scss */
+/* line 17, ../../sass/_helpers/_classes.scss */
 .pull-right {
   float: right; }
 
-/* line 10, ../../sass/_helpers/_classes.scss */
+/* line 19, ../../sass/_helpers/_classes.scss */
 .center {
   text-align: center; }
 
-/* line 14, ../../sass/_helpers/_classes.scss */
+/* line 23, ../../sass/_helpers/_classes.scss */
 .pad-btm {
   margin-bottom: 40px; }
 
-/* line 18, ../../sass/_helpers/_classes.scss */
+/* line 27, ../../sass/_helpers/_classes.scss */
 .push-btm {
   margin-bottom: 40px; }
 
-/* line 19, ../../sass/_helpers/_classes.scss */
+/* line 28, ../../sass/_helpers/_classes.scss */
 .push-btm-half {
   margin-bottom: 20px; }
 
@@ -156,26 +166,22 @@ section {
   padding: 60px 0;
   position: relative; }
 
-/* line 21, ../../sass/base/_base.scss */
-header {
-  background: #0e0603; }
-
-/* line 29, ../../sass/base/_base.scss */
+/* line 28, ../../sass/base/_base.scss */
 footer {
   background: #1e1d26;
   padding: 40px; }
 
-/* line 34, ../../sass/base/_base.scss */
+/* line 33, ../../sass/base/_base.scss */
 header,
 footer {
   text-align: center; }
 
-/* line 39, ../../sass/base/_base.scss */
+/* line 38, ../../sass/base/_base.scss */
 footer a,
 header a {
   text-decoration: none; }
 
-/* line 44, ../../sass/base/_base.scss */
+/* line 43, ../../sass/base/_base.scss */
 pre {
   font-family: "courier";
   font-size: 12px;
@@ -185,33 +191,33 @@ pre {
   margin: 20px 0;
   display: none; }
 
-/* line 59, ../../sass/base/_base.scss */
+/* line 58, ../../sass/base/_base.scss */
 nav {
   display: inline-block; }
-  /* line 64, ../../sass/base/_base.scss */
+  /* line 63, ../../sass/base/_base.scss */
   nav ul li {
     display: inline-block; }
-    /* line 67, ../../sass/base/_base.scss */
+    /* line 66, ../../sass/base/_base.scss */
     nav ul li a {
       display: block;
       color: white;
       text-decoration: none;
       padding: 0 13px 9px 13px;
       transition: color .2s; }
-      /* line 74, ../../sass/base/_base.scss */
+      /* line 73, ../../sass/base/_base.scss */
       nav ul li a:hover {
         color: #9f1a27; }
-      @media (min-width: 768px) {
-        /* line 67, ../../sass/base/_base.scss */
+      @media (min-width: 1100px) {
+        /* line 66, ../../sass/base/_base.scss */
         nav ul li a {
           padding: 0 23px 9px 23px; } }
 
-/* line 86, ../../sass/base/_base.scss */
+/* line 85, ../../sass/base/_base.scss */
 img {
   width: 100%;
   display: block; }
 
-/* line 92, ../../sass/base/_base.scss */
+/* line 91, ../../sass/base/_base.scss */
 input {
   width: 100%;
   border: 0;
@@ -224,7 +230,7 @@ input {
   -webkit-font-smoothing: antialiased;
   padding: 10px 10px; }
 
-/* line 105, ../../sass/base/_base.scss */
+/* line 104, ../../sass/base/_base.scss */
 ::-webkit-input-placeholder {
   font-family: "DINweb", "helvetica", sans-serif;
   font-weight: 300;
@@ -233,51 +239,51 @@ input {
 
 /* Firefox 18- */
 /* Firefox 19+ */
-/* line 118, ../../sass/base/_base.scss */
+/* line 117, ../../sass/base/_base.scss */
 input:focus {
   box-shadow: 0 0 1px #9f1a27; }
 
-/* line 130, ../../sass/base/_base.scss */
+/* line 129, ../../sass/base/_base.scss */
 nav,
 footer nav {
   font-size: 26px; }
-  /* line 134, ../../sass/base/_base.scss */
+  /* line 133, ../../sass/base/_base.scss */
   nav a:hover,
   footer nav a:hover {
     color: #9f1a27; }
 
-/* line 139, ../../sass/base/_base.scss */
+/* line 138, ../../sass/base/_base.scss */
 .homepage p {
   font-size: 26px; }
 
-/* line 144, ../../sass/base/_base.scss */
+/* line 143, ../../sass/base/_base.scss */
 p {
   font-size: 19px; }
 
-/* line 148, ../../sass/base/_base.scss */
+/* line 147, ../../sass/base/_base.scss */
 a {
   color: #9f1a27;
   transition: color 0.2s ease; }
-  /* line 152, ../../sass/base/_base.scss */
+  /* line 151, ../../sass/base/_base.scss */
   a:hover {
     color: #c1621e; }
 
-/* line 157, ../../sass/base/_base.scss */
+/* line 156, ../../sass/base/_base.scss */
 .event-day,
 .footer-title {
   font-family: "MrsEavesItalicRegular", "helvetica", sans-serif;
   color: white;
   font-size: 50px; }
 
-/* line 164, ../../sass/base/_base.scss */
+/* line 163, ../../sass/base/_base.scss */
 .footer-title {
   border-bottom: 2px solid white; }
 
-/* line 176, ../../sass/base/_base.scss */
+/* line 175, ../../sass/base/_base.scss */
 .footer-hours {
   color: white; }
 
-/* line 180, ../../sass/base/_base.scss */
+/* line 179, ../../sass/base/_base.scss */
 .event-description,
 footer p,
 .mailing-list p {
@@ -285,40 +291,40 @@ footer p,
   line-height: 23px;
   color: #7f8092; }
 
-/* line 188, ../../sass/base/_base.scss */
+/* line 187, ../../sass/base/_base.scss */
 .upcoming-event,
 .location {
   font-size: 26px;
   line-height: 31px; }
 
-/* line 194, ../../sass/base/_base.scss */
+/* line 193, ../../sass/base/_base.scss */
 .upcoming-event {
   background: rgba(0, 0, 0, 0.2);
   color: #7f8092; }
 
-/* line 199, ../../sass/base/_base.scss */
+/* line 198, ../../sass/base/_base.scss */
 .location {
   color: white; }
 
-/* line 203, ../../sass/base/_base.scss */
+/* line 202, ../../sass/base/_base.scss */
 .location {
   font-size: 26px; }
 
-/* line 207, ../../sass/base/_base.scss */
+/* line 206, ../../sass/base/_base.scss */
 .copyright,
 footer nav .location,
 footer nav .social {
   color: #7f8092; }
 
-/* line 221, ../../sass/base/_base.scss */
+/* line 220, ../../sass/base/_base.scss */
 .menu-nav {
   background: rgba(14, 6, 3, 0.8); }
-  /* line 223, ../../sass/base/_base.scss */
+  /* line 222, ../../sass/base/_base.scss */
   .menu-nav:hover {
     color: white;
     border: 2px solid white; }
 
-/* line 229, ../../sass/base/_base.scss */
+/* line 228, ../../sass/base/_base.scss */
 .menu-nav.active {
   color: #9f1a27; }
 
@@ -521,18 +527,22 @@ footer small {
 
 /* line 1, ../../sass/elements/_header.scss */
 .primary-header {
-  position: relative;
-  padding: 44px 0; }
-  /* line 5, ../../sass/elements/_header.scss */
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  padding: 44px 0;
+  background: rgba(0, 128, 0, 0.94); }
+  /* line 8, ../../sass/elements/_header.scss */
   .primary-header .h-icon {
-    margin-top: -33px;
+    float: left;
+    margin-top: -27px;
     fill: #262734;
     transition: fill .2s; }
-    /* line 10, ../../sass/elements/_header.scss */
+    /* line 14, ../../sass/elements/_header.scss */
     .primary-header .h-icon:hover {
       fill: #9f1a27; }
 
-/* line 16, ../../sass/elements/_header.scss */
+/* line 20, ../../sass/elements/_header.scss */
 .header-l,
 .header-r {
   position: absolute;
@@ -540,7 +550,7 @@ footer small {
   top: 50%;
   margin-top: -25px; }
   @media (min-width: 0) and (max-width: 767px) {
-    /* line 16, ../../sass/elements/_header.scss */
+    /* line 20, ../../sass/elements/_header.scss */
     .header-l,
     .header-r {
       position: relative;
@@ -548,23 +558,19 @@ footer small {
       display: block; } }
 
 @media (min-width: 768px) {
-  /* line 30, ../../sass/elements/_header.scss */
+  /* line 35, ../../sass/elements/_header.scss */
   .header-l {
     left: 20px; } }
 
-/* line 37, ../../sass/elements/_header.scss */
+/* line 42, ../../sass/elements/_header.scss */
 .header-r .address,
 .header-r .telephone {
   display: block;
   text-align: right; }
 @media (min-width: 768px) {
-  /* line 36, ../../sass/elements/_header.scss */
+  /* line 41, ../../sass/elements/_header.scss */
   .header-r {
     right: 20px; } }
-
-/* line 50, ../../sass/elements/_header.scss */
-.h-icon {
-  float: left; }
 
 /* line 1, ../../sass/elements/_hero.scss */
 .hero {
@@ -738,14 +744,18 @@ footer .is-current-page, header .is-current-page {
 .nav-menu {
   display: block;
   text-align: center;
-  margin-bottom: 100px; }
-  /* line 57, ../../sass/elements/_nav.scss */
+  padding-top: 60px;
+  margin-bottom: 80px; }
+  /* line 58, ../../sass/elements/_nav.scss */
   .nav-menu ul {
     display: inline-block; }
-  /* line 60, ../../sass/elements/_nav.scss */
+  /* line 62, ../../sass/elements/_nav.scss */
+  .nav-menu li {
+    margin-bottom: 20px; }
+  /* line 66, ../../sass/elements/_nav.scss */
   .nav-menu a {
     background: #0e0603; }
-    /* line 64, ../../sass/elements/_nav.scss */
+    /* line 70, ../../sass/elements/_nav.scss */
     .nav-menu a:hover {
       border-color: white;
       color: white; }
@@ -756,8 +766,8 @@ footer .is-current-page, header .is-current-page {
 
 /* line 5, ../../sass/elements/_svg.scss */
 .h-icon {
-  height: 113px;
-  width: 113px; }
+  height: 100px;
+  width: 100px; }
 
 /* line 1, ../../sass/elements/_titles.scss */
 .title,
