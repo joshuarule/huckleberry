@@ -24,6 +24,6 @@
     bottom: 0;
     left: 0;
     right: 0;
-    @include background-image(linear-gradient(rgba($purple-text, 0), rgba($purple-text, 0) 50%, rgba($purple-text, .7)));
+    @include background-image(linear-gradient(rgba(29,30,39, 0), rgba(29,30,39, 0) 50%, rgba(29,30,39, 1)));
   }
 }
