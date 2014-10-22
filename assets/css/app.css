@@ -87,11 +87,30 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   margin-left: 51.06383%;
   margin-right: -100%; }
 
+@media (min-width: 768px) {
+  /* line 81, ../../sass/_config/_grid.scss */
+  .span-8 {
+    width: 65.95745%;
+    float: left;
+    margin-left: 0;
+    margin-right: -100%; } }
+
+/* line 88, ../../sass/_config/_grid.scss */
+.span-3-10 {
+  width: 23.40426%;
+  float: left;
+  margin-left: 76.59574%;
+  margin-right: -100%; }
+
 /* line 1, ../../sass/_helpers/_classes.scss */
 .hide {
   display: none; }
 
-/* line 7, ../../sass/_helpers/_classes.scss */
+/* line 5, ../../sass/_helpers/_classes.scss */
+.clear {
+  clear: both; }
+
+/* line 11, ../../sass/_helpers/_classes.scss */
 .cf:after,
 section:after,
 .events-list .current-event:after,
@@ -101,29 +120,37 @@ footer small:after,
   display: table;
   clear: both; }
 
-/* line 16, ../../sass/_helpers/_classes.scss */
+/* line 20, ../../sass/_helpers/_classes.scss */
 .pull-left {
   float: left; }
 
-/* line 17, ../../sass/_helpers/_classes.scss */
+/* line 21, ../../sass/_helpers/_classes.scss */
 .pull-right {
   float: right; }
 
-/* line 19, ../../sass/_helpers/_classes.scss */
+/* line 23, ../../sass/_helpers/_classes.scss */
 .center {
   text-align: center; }
 
-/* line 23, ../../sass/_helpers/_classes.scss */
+/* line 27, ../../sass/_helpers/_classes.scss */
 .pad-btm {
   margin-bottom: 40px; }
 
-/* line 27, ../../sass/_helpers/_classes.scss */
+/* line 31, ../../sass/_helpers/_classes.scss */
 .push-btm {
   margin-bottom: 40px; }
 
-/* line 28, ../../sass/_helpers/_classes.scss */
+/* line 32, ../../sass/_helpers/_classes.scss */
 .push-btm-half {
   margin-bottom: 20px; }
+
+/* line 34, ../../sass/_helpers/_classes.scss */
+.hide-mobile {
+  display: none; }
+  @media (min-width: 768px) {
+    /* line 34, ../../sass/_helpers/_classes.scss */
+    .hide-mobile {
+      display: block; } }
 
 /* line 3, ../../sass/_helpers/_extends.scss */
 section, .events-list .current-event, footer small, .menu-items,
@@ -802,20 +829,6 @@ footer .is-current-page, header .is-current-page {
   width: 150px;
   height: 150px;
   display: block; }
-
-/* line 2, ../../sass/layout/_about.scss */
-.span-8 {
-  width: 65.95745%;
-  float: left;
-  margin-left: 0;
-  margin-right: -100%; }
-
-/* line 6, ../../sass/layout/_about.scss */
-.span-3-10 {
-  width: 23.40426%;
-  float: left;
-  margin-left: 76.59574%;
-  margin-right: -100%; }
 
 @media (min-width: 768px) {
   /* line 1, ../../sass/layout/_col.scss */
