@@ -1,18 +1,44 @@
 .primary-header {
+  // outline: 1px solid red;
   position: fixed;
   width: 100%;
   z-index: 100;
-  padding: 44px 0; // magic number
+  height: $header-height-mbl;
+  
   background: rgba($black, .94);
+
+  @include breakpoint($menu-break) {
+    // padding: 44px 0; // magic number
+    height: $header-height;
+  }
 
   .h-icon {
     float: left;
-    margin-top: -27px; // magic number
+    margin-top: -5px; // magic number
+    height: 60px;
+    width:  60px;
     fill: #262734;
     transition: fill .2s;
 
     &:hover {
       fill: $red;
+    }
+
+    @include breakpoint($menu-break) {
+      margin-top: -15px;
+      height: 80px;
+      width:  80px;
+    }
+  }
+
+  .menu-icon {
+    float: right;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+    @include breakpoint($menu-break) {
+      display: none;
     }
   }
 }
@@ -21,31 +47,39 @@
 .header-r{
   $h: 50px;
   position: absolute;
+  z-index: 101;
   height: $h;
   top: 50%;
   margin-top: -$h / 2;
-
-  @include breakpoint($break0) {
-    position: relative;
-    margin-bottom: rhythm(.5);
-    display: block;
-  }
 }
 
 .header-l {
-  @include breakpoint($break) {
+  left: 10px;
+
+  @include breakpoint($menu-break) {
     left: 20px;
   }
 }
 
 .header-r {
+  right: 20px;
+
+  @include breakpoint($menu-break0) {
+    left: 85px;
+    right: auto;
+  } 
+
   .address,
   .telephone {
     display: block;
     text-align: right;
-  }
 
-  @include breakpoint($break) {
-    right: 20px;
+    @include breakpoint($menu-break0) {
+      text-align: left;
+    }
+
+    @include breakpoint(0 1000px) {
+      font-size: 16px;
+    }
   }
 }

@@ -1,6 +1,12 @@
 .mailing-list {
-  @include span(4 at 4);
-  clear:left;
+  @include breakpoint($break) {
+    @include span(6 at 1);
+    clear:left;
+  }
+
+  @include breakpoint(1050px) {
+    @include span(4 at 4);
+  }
 
   p {color: $white;}
 }

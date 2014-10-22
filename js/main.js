@@ -40,6 +40,18 @@ $(document).ready(function(){
     e.preventDefault();
     window.location.href = "/menu/cocktails";
   });
+
+  // menu toggle
+
+  $("#push").on('click', function() {
+    if ($("body").hasClass("js-menu-open")) {
+      $("body").removeClass("js-menu-open");
+      $("body").addClass("js-menu-closed");
+    } else {
+      $("body").removeClass("js-menu-closed");
+      $("body").addClass("js-menu-open");
+    }
+  });
 })
 
 // $(function() {

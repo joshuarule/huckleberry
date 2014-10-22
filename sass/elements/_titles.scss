@@ -27,3 +27,17 @@
     background: $white;
   }
 }
+
+
+.category-title {
+  font-size: 40px; // same as button
+  font-family: $alt-font-family; // same as button
+  color: $peach;
+  line-height: 50px;
+  padding-top: 5px; // centers title
+  margin-left: -$base-spacing-unit;
+  background: rgba($black,.8);
+  font-weight: 300;
+  margin: 0 0 30px -20px;
+  text-indent: 20px;
+}

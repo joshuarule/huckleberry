@@ -3,5 +3,8 @@
 }
 
 .page-wrap {
-  padding-top: $header-height;
+  padding-top: $header-height-mbl;
+  @include breakpoint($menu-break) {
+    padding-top: $header-height;
+  }
 }

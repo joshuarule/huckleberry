@@ -1,0 +1,158 @@
+// http://joshbroton.com/quick-fix-sass-mixins-for-css-keyframe-animations/
+
+@mixin animation($animate...) {
+    $max: length($animate);
+    $animations: '';
+
+    @for $i from 1 through $max {
+        $animations: #{$animations + nth($animate, $i)};
+
+        @if $i < $max {
+            $animations: #{$animations + ", "};
+        }
+    }
+    -webkit-animation: $animations;
+    -moz-animation:    $animations;
+    -o-animation:      $animations;
+    animation:         $animations;
+}
+
+@mixin keyframes($animationName) {
+    @-webkit-keyframes #{$animationName} {
+        @content;
+    }
+    @-moz-keyframes #{$animationName} {
+        @content;
+    }
+    @-o-keyframes #{$animationName} {
+        @content;
+    }
+    @keyframes #{$animationName} {
+        @content;
+    }
+}
+
+///////////
+
+$size: 26px;
+$color: $white;
+$stroke: $size * .2;
+$radius: 2px;
+
+.menu-icon {
+  display: block;
+  height: $size;
+  width:  $size * 1.2;
+}
+
+// bars
+
+.menu-icon-bars,
+.menu-icon-bars:before,
+.menu-icon-bars:after {
+  position:  absolute;
+  height:     $stroke;
+  background: $color;
+  width: 100%;
+  border-radius: $radius;
+}
+
+.menu-icon-bars {
+  top: 50%;
+  margin-top: -$stroke / 2;
+  left: 0;
+  
+  .js-menu-open & {
+    @include animation('center-fade .5s 1');
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+  }
+  .js-menu-closed & {
+    @include animation('center-fadein .5s 1');
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+  }
+  
+  // top & bottom
+  &:before,
+  &:after {
+    content: '';
+    left: 0;
+  }
+  
+  // top bar
+  &:before {
+    top: -$size / 2 + $stroke / 2;
+    
+    .js-menu-open & {
+      @include animation('top-to-center .5s 1');
+      animation-fill-mode: forwards;
+      -webkit-animation-fill-mode: forwards;
+    }
+    .js-menu-closed & {
+      @include animation('center-to-top .5s 1');
+      animation-fill-mode: forwards;
+      -webkit-animation-fill-mode: forwards;
+    }
+  }
+  
+  // bottom bar
+  &:after {
+    bottom: -$size / 2 + $stroke / 2;
+    
+    .js-menu-open & {
+      @include animation('bottom-to-center .5s 1');
+      animation-fill-mode: forwards;
+      -webkit-animation-fill-mode: forwards;
+    }
+    .js-menu-closed & {
+      @include animation('center-to-bottom .5s 1');
+      animation-fill-mode: forwards;
+      -webkit-animation-fill-mode: forwards;
+    }
+  }
+}
+
+// animations
+
+@include keyframes(center-fade) {
+  0%   { background: $color; }
+  40%  { background: $color;}
+  60%  { background: rgba(0,0,0,0);}
+  100% { background: rgba(0,0,0,0);}
+}
+
+@include keyframes(center-fadein) {
+  0%   { background: rgba(0,0,0,0);}
+  40%  { background: rgba(0,0,0,0);}
+  60%  { background: $color;}
+  100% { background: $color;}
+}
+
+@include keyframes(top-to-center) {
+  0%   { top: -$size / 2 + $stroke / 2; }
+  40%  { top: 0; }
+  60%  { top: 0; @include rotate(0deg) }
+  100% { top: 0; @include rotate(45deg);}
+}
+
+@include keyframes(center-to-top) {
+  0%   { top: 0; @include rotate(45deg);}
+  40%  { top: 0; @include rotate(0deg) }
+  60%  { top: 0; }
+  100% { top: -$size / 2 + $stroke / 2; }
+}
+
+@include keyframes(bottom-to-center) {
+  0%   { bottom: -$size / 2 + $stroke / 2; }
+  40%  { bottom: 0; }
+  60%  { bottom: 0; @include rotate(0deg) }
+  100% { bottom: 0; @include rotate(-45deg);}
+}
+
+@include keyframes(center-to-bottom) {
+  0%   { bottom: 0; @include rotate(-45deg);}
+  40%  { bottom: 0; @include rotate(0deg) }
+  60%  { bottom: 0; }
+  100% { bottom: -$size / 2 + $stroke / 2; }
+}

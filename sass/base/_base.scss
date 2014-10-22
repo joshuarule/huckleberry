@@ -10,6 +10,10 @@ body {
   color: $white;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  &.js-menu-open {
+    overflow: hidden;
+  }
 }
 
 section {
@@ -67,14 +71,14 @@ nav {
         display: block;
         color: $white;
         text-decoration: none;
-        padding: 0 13px 9px 13px;
+        padding: 0 10px 9px 10px;
         transition: color .2s;
         
         &:hover {
           color: $red;
         }
 
-        @include breakpoint(11  00px) {
+        @include breakpoint(1100px) {
           padding: 0 23px 9px 23px;
         }
       }

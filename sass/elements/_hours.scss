@@ -1,5 +1,15 @@
 .hours {
-  @include span(4 at 4);
+  @include breakpoint($break0) {
+    margin-bottom: $dbl-spacing-unit;
+  }
+
+  @include breakpoint($break) {
+    @include span(6 at 1);
+  }
+
+  @include breakpoint(1050px) {
+    @include span(4 at 4);
+  }
   
   dt,
   dd {

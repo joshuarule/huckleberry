@@ -3,6 +3,9 @@
 $break:   768px, "no-query" true;
 $break2: 1100px;
 
+$menu-break: 900px, "no-query" true;
+$menu-break0: 0 (nth($menu-break, 1) - 1px);
+
 
 $break0:  0 (nth($break, 1) - 1px);
 $break1:  768px ($break2 - 1px);
@@ -71,5 +74,6 @@ $type-weight: (
 $base-spacing-unit: 20px;
 $dbl-spacing-unit:   $base-spacing-unit * 2;
 
-$header-height: 180px;
+$header-height:     100px;
+$header-height-mbl: 80px;
 

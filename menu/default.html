@@ -1,30 +1,34 @@
 {% capture content %}
 
-<script>
 
-$(document).ready(function(){
-  var items = $('.menu-items.third-1 li');
+{% if url != '/menu/happy-hour' %}
+  <script>
 
-  // finds number of items in menu
-  var itemsTotal = items.size();
-  console.log(itemsTotal + " :total items");
+    $(document).ready(function(){
+      var items = $('.menu-items.third-1 li');
 
-  // divides items in 3 
-  var itemsSlice =  itemsTotal / 3;
-  var itemsSliceTwo = itemsSlice + itemsSlice;
+      // finds number of items in menu
+      var itemsTotal = items.size();
+      console.log(itemsTotal + " :total items");
 
-  console.log(itemsSliceTwo);
+      // divides items in 3 
+      var itemsSlice =  itemsTotal / 3;
+      var itemsSliceTwo = itemsSlice + itemsSlice;
 
-  for (var i=itemsTotal; i > 0; i--) {
-    if (i > itemsSliceTwo) {
-      $('.third-3').prepend(items.eq(i));
-    } else if (i >= itemsSlice) {
-      $('.third-2').prepend(items.eq(i));
-    }
-  }
-});
+      console.log(itemsSliceTwo);
 
-</script>
+      for (var i=itemsTotal; i > 0; i--) {
+        if (i > itemsSliceTwo) {
+          $('.third-3').prepend(items.eq(i));
+        } else if (i >= itemsSlice) {
+          $('.third-2').prepend(items.eq(i));
+        }
+      }
+    });
+
+  </script>
+{% endif %}
+
 
 <div class="menu-bg" style="background-image: url('/assets/img/menu-bg.jpg')">
 
@@ -33,39 +37,50 @@ $(document).ready(function(){
   <div class="container">
 
     <pre>menu/default.html</pre>
-    
+
+
     {% include 'includes/nav-menu' %}
 
-    <ul class="menu-items third-1">
-    {% for set in taxonomy %}
-      {% for tag in set %}
-        {% unless tag == "luxurybox" %}
-          <li>
-            <h1 class="category-title">{{tag.value}}</h1>
-          </li>
-          {% for post in tag.posts %}
-            <li class="item">
-              <h2 class="item-title">{{post.title}}</h2>
-              {{post.body}}
+    {% if url == '/menu/happy-hour' %}
+      <div class="happy-hour">
+        {{body}}
+      </div>
+    {% endif %}
+
+    {% if url != '/menu/happy-hour' %}
+
+      <ul class="menu-items third-1">
+      {% for set in taxonomy %}
+        {% for tag in set %}
+          {% unless tag == "luxurybox" %}
+            <li>
+              <h1 class="category-title">{{tag.value}}</h1>
             </li>
-          {% endfor %}
-        {% endunless%}
+            {% for post in tag.posts %}
+              <li class="item">
+                <h2 class="item-title">{{post.title}}</h2>
+                {{post.body}}
+              </li>
+            {% endfor %}
+          {% endunless%}
+        {% endfor %}
       {% endfor %}
-    {% endfor %}
-    </ul>
-    <ul class="menu-items third-2"></ul>
-    <ul class="menu-items third-3">
-        {% if taxonomy.tags.luxurybox.posts %}
-          <li><h1 class="category-title">Luxury Box</h1></li>
-          {% for post in taxonomy.tags.luxurybox.posts %}
-            <li class="item">
-              <h2 class="item-title">{{post.title}}</h2>
-              {{post.body}}
-            </li>
-          {% endfor %}
-        {% endif %}
-    </ul>
-    <div class="cf"></div>
+      </ul>
+      <ul class="menu-items third-2"></ul>
+      <ul class="menu-items third-3">
+          {% if taxonomy.tags.luxurybox.posts %}
+            <li><h1 class="category-title">Luxury Box</h1></li>
+            {% for post in taxonomy.tags.luxurybox.posts %}
+              <li class="item">
+                <h2 class="item-title">{{post.title}}</h2>
+                {{post.body}}
+              </li>
+            {% endfor %}
+          {% endif %}
+      </ul>
+      <div class="cf"></div>
+
+    {% endif %}
 
   </div>
 

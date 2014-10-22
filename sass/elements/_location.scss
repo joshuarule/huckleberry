@@ -1,8 +1,22 @@
 .location {
-  float: right;
-  width: span(5);
 
-  a {
-    margin-bottom: 40px;
+  @include breakpoint($break0) {
+    margin-bottom: $dbl-spacing-unit;
+  }
+
+  .map {
+    display: none;
+  }
+
+  @include breakpoint($break) {
+    float: right;
+    width: span(6);
+
+    .map {
+      display: block;
+    }
+  }
+  @include breakpoint(1050px) {
+    width: span(5);
   }
 }
