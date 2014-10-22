@@ -23,7 +23,6 @@ header {
   // margin-bottom: 40px; // $fix
   // padding-left:  40px;
   // padding-right: 40px;
-  background: $black;
 }
 
 footer {
@@ -75,7 +74,7 @@ nav {
           color: $red;
         }
 
-        @include breakpoint($break) {
+        @include breakpoint(1100px) {
           padding: 0 23px 9px 23px;
         }
       }
