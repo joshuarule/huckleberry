@@ -88,3 +88,7 @@ $susy: (
 .span-3-10 {
   @include span(3 at 10);
 }
+
+.span-4-9 {
+  @include span(4 at 9);
+}

@@ -102,6 +102,13 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   margin-left: 76.59574%;
   margin-right: -100%; }
 
+/* line 92, ../../sass/_config/_grid.scss */
+.span-4-9 {
+  width: 31.91489%;
+  float: left;
+  margin-left: 68.08511%;
+  margin-right: -100%; }
+
 /* line 1, ../../sass/_helpers/_classes.scss */
 .hide {
   display: none; }
@@ -288,29 +295,33 @@ p {
   font-size: 19px; }
 
 /* line 147, ../../sass/base/_base.scss */
+strong {
+  font-weight: 600; }
+
+/* line 151, ../../sass/base/_base.scss */
 a {
   color: #9f1a27;
   transition: color 0.2s ease; }
-  /* line 151, ../../sass/base/_base.scss */
+  /* line 155, ../../sass/base/_base.scss */
   a:hover {
     color: #c1621e; }
 
-/* line 156, ../../sass/base/_base.scss */
+/* line 160, ../../sass/base/_base.scss */
 .event-day,
 .footer-title {
   font-family: "MrsEavesItalicRegular", "helvetica", sans-serif;
   color: white;
   font-size: 50px; }
 
-/* line 163, ../../sass/base/_base.scss */
+/* line 167, ../../sass/base/_base.scss */
 .footer-title {
   border-bottom: 2px solid white; }
 
-/* line 175, ../../sass/base/_base.scss */
+/* line 179, ../../sass/base/_base.scss */
 .footer-hours {
   color: white; }
 
-/* line 179, ../../sass/base/_base.scss */
+/* line 183, ../../sass/base/_base.scss */
 .event-description,
 footer p,
 .mailing-list p {
@@ -318,40 +329,40 @@ footer p,
   line-height: 23px;
   color: #7f8092; }
 
-/* line 187, ../../sass/base/_base.scss */
+/* line 191, ../../sass/base/_base.scss */
 .upcoming-event,
 .location {
   font-size: 26px;
   line-height: 31px; }
 
-/* line 193, ../../sass/base/_base.scss */
+/* line 197, ../../sass/base/_base.scss */
 .upcoming-event {
   background: rgba(0, 0, 0, 0.2);
   color: #7f8092; }
 
-/* line 198, ../../sass/base/_base.scss */
+/* line 202, ../../sass/base/_base.scss */
 .location {
   color: white; }
 
-/* line 202, ../../sass/base/_base.scss */
+/* line 206, ../../sass/base/_base.scss */
 .location {
   font-size: 26px; }
 
-/* line 206, ../../sass/base/_base.scss */
+/* line 210, ../../sass/base/_base.scss */
 .copyright,
 footer nav .location,
 footer nav .social {
   color: #7f8092; }
 
-/* line 220, ../../sass/base/_base.scss */
+/* line 224, ../../sass/base/_base.scss */
 .menu-nav {
   background: rgba(14, 6, 3, 0.8); }
-  /* line 222, ../../sass/base/_base.scss */
+  /* line 226, ../../sass/base/_base.scss */
   .menu-nav:hover {
     color: white;
     border: 2px solid white; }
 
-/* line 228, ../../sass/base/_base.scss */
+/* line 232, ../../sass/base/_base.scss */
 .menu-nav.active {
   color: #9f1a27; }
 
@@ -372,8 +383,9 @@ footer nav .social {
 /* line 16, ../../sass/elements/_bg-img.scss */
 .menu-bg {
   background-size: cover;
-  position: relative; }
-  /* line 20, ../../sass/elements/_bg-img.scss */
+  position: relative;
+  margin-bottom: -40px; }
+  /* line 21, ../../sass/elements/_bg-img.scss */
   .menu-bg:before {
     position: absolute;
     content: '';
@@ -603,7 +615,7 @@ footer small {
 .hero {
   content: '';
   display: block;
-  background-size: 35%;
+  background-size: 56%;
   background-position: bottom left;
   background-repeat: no-repeat; }
 
@@ -666,6 +678,10 @@ footer small {
     line-height: 23px;
     color: #7f8092; }
 
+/* line 26, ../../sass/elements/_hours.scss */
+.sub-footer {
+  border-top: 5px solid #1e1d26; }
+
 /* line 6, ../../sass/elements/_items.scss */
 .items {
   margin-bottom: 80px;
@@ -712,7 +728,7 @@ footer small {
   float: left;
   margin-left: 17.02128%;
   margin-right: -100%;
-  margin-top: 60px; }
+  margin-top: 25px; }
 
 /* line 16, ../../sass/elements/_logo.scss */
 #huckleberry-logo path {
@@ -918,7 +934,8 @@ footer .is-current-page, header .is-current-page {
 
 /* line 5, ../../sass/layout/_wrapper.scss */
 .page-wrap {
-  padding-top: 180px; }
+  padding-top: 180px;
+  margin-bottom: 40px; }
 
 /* line 22, ../../sass/typography/_typomatic.scss */
 h1, h2, h3, h4, h5 {

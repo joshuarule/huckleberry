@@ -144,6 +144,10 @@ p {
   font-size: 19px;
 }
 
+strong {
+  font-weight: 600;
+}
+
 a {
   color: $red;
   @include single-transition(color, .2s, ease);
