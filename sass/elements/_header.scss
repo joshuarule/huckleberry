@@ -3,7 +3,7 @@
   width: 100%;
   z-index: 100;
   padding: 44px 0; // magic number
-  background: rgba(green, .94);
+  background: rgba($black, .94);
 
   .h-icon {
     float: left;
@@ -24,7 +24,7 @@
   height: $h;
   top: 50%;
   margin-top: -$h / 2;
-  
+
   @include breakpoint($break0) {
     position: relative;
     margin-bottom: rhythm(.5);
