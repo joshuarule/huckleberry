@@ -208,7 +208,7 @@ nav {
       /* line 73, ../../sass/base/_base.scss */
       nav ul li a:hover {
         color: #9f1a27; }
-      @media (min-width: 1100px) {
+      @media (min-width: 0px) and (max-width: 11) {
         /* line 66, ../../sass/base/_base.scss */
         nav ul li a {
           padding: 0 23px 9px 23px; } }
@@ -897,6 +897,10 @@ footer .is-current-page, header .is-current-page {
 /* line 1, ../../sass/layout/_wrapper.scss */
 .wrapper {
   padding: 0 6.38298%; }
+
+/* line 5, ../../sass/layout/_wrapper.scss */
+.page-wrap {
+  padding-top: 180px; }
 
 /* line 22, ../../sass/typography/_typomatic.scss */
 h1, h2, h3, h4, h5 {
