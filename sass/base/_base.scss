@@ -19,10 +19,10 @@ section {
 }
 
 header {
-  margin-top:    40px;
-  margin-bottom: 40px; // $fix
-  padding-left:  40px;
-  padding-right: 40px;
+  // margin-top:    40px;
+  // margin-bottom: 40px; // $fix
+  // padding-left:  40px;
+  // padding-right: 40px;
   background: $black;
 }
 
@@ -68,11 +68,15 @@ nav {
         display: block;
         color: $white;
         text-decoration: none;
-        padding: 0 23px 9px 23px;
-        @include transition(.2s);
+        padding: 0 13px 9px 13px;
+        transition: color .2s;
         
         &:hover {
           color: $red;
+        }
+
+        @include breakpoint($break) {
+          padding: 0 23px 9px 23px;
         }
       }
     }

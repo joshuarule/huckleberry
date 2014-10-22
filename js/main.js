@@ -32,6 +32,16 @@ $(function() {
 
 });
 
+$(document).ready(function(){
+
+  // menu link redirects to menu/cocktails
+
+  $("a[href='/menu']").on('click', function(e){
+    e.preventDefault();
+    window.location.href = "/menu/cocktails";
+  });
+})
+
 // $(function() {
 //   FastClick.attach(document.body);
 // });

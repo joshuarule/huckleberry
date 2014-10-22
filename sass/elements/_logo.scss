@@ -3,11 +3,15 @@
   @include span(8 at 3);
   
   margin-top: 60px;
-  svg  {
-    width: 100%;
-    // @include breakpoint($break) {width: grid-span(6,2);}
-    // @include breakpoint($break2) {width: grid-span(8,1);}
-  }
-  path {fill: $white;}
+  // svg  {
+  //   width: 100%;
+  //   // @include breakpoint($break) {width: grid-span(6,2);}
+  //   // @include breakpoint($break2) {width: grid-span(8,1);}
+  // }
+  // path {fill: $white;}
   
+}
+
+#huckleberry-logo {
+  path {fill: $white;}
 }

@@ -1,6 +1,25 @@
-.address,
-.telephone {
+.primary-header {
+  position: relative;
+  padding: 44px 0; // magic number
+
+  .h-icon {
+    margin-top: -33px; // magic number
+    fill: #262734;
+    transition: fill .2s;
+
+    &:hover {
+      fill: $red;
+    }
+  }
+}
+
+.header-l,
+.header-r{
+  $h: 50px;
   position: absolute;
+  height: $h;
+  top: 50%;
+  margin-top: -$h / 2;
   @include breakpoint($break0) {
     position: relative;
     margin-bottom: rhythm(.5);
@@ -8,15 +27,26 @@
   }
 }
 
-.address {
+.header-l {
   @include breakpoint($break) {
     left: 20px;
   }
-  
 }
 
-.telephone {
+.header-r {
+  .address,
+  .telephone {
+    display: block;
+    text-align: right;
+  }
+
   @include breakpoint($break) {
     right: 20px;
   }
+}
+
+
+
+.h-icon {
+  float: left;
 }

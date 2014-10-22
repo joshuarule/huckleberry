@@ -1,8 +1,17 @@
 <pre>includes/header include</pre>
 <header class="primary-header">
 
-  <span class="address" itemprop="address"><a href="{{site.meta['map']}}" target="_blank"><address>{{site.meta['address']}}<span class="hide">, NY 11211</span></address></a></span>
-  <span class="telephone" itemprop="telephone"><a href="tel:+1{{site.meta['phone']}}">{{site.meta['phone']}}</a></span>
+  <div class="header-l">
+    <a href="/" class="home-link">
+      <svg class="h-icon"><use xlink:href="#h-logo" /></svg>
+    </a>
+  </div>
+  
+  <div class="header-r">
+    <span class="address" itemprop="address"><a href="{{site.meta['map']}}" target="_blank"><address>{{site.meta['address']}}<span class="hide">, NY 11211</span></address></a></span>
+    <span class="telephone" itemprop="telephone"><a href="tel:+1{{site.meta['phone']}}">{{site.meta['phone']}}</a></span>
+  </div>
+  
   <nav class="nav-main">
     <ul class="page-menu">
     {% for page in site.pages offset:1 %}
