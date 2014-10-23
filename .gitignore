@@ -1,5 +1,5 @@
 .sash-cache
-.sash-cache/*
+.sash-cache/**/*
 _DOCS
 _DOCS/*
 asssets/css/app.css

@@ -87,6 +87,28 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   margin-left: 51.06383%;
   margin-right: -100%; }
 
+@media (min-width: 768px) {
+  /* line 81, ../../sass/_config/_grid.scss */
+  .span-8 {
+    width: 65.95745%;
+    float: left;
+    margin-left: 0;
+    margin-right: -100%; } }
+
+/* line 88, ../../sass/_config/_grid.scss */
+.span-3-10 {
+  width: 23.40426%;
+  float: left;
+  margin-left: 76.59574%;
+  margin-right: -100%; }
+
+/* line 92, ../../sass/_config/_grid.scss */
+.span-4-9 {
+  width: 31.91489%;
+  float: left;
+  margin-left: 68.08511%;
+  margin-right: -100%; }
+
 /* line 1, ../../sass/_helpers/_classes.scss */
 .hide {
   display: none; }
@@ -122,9 +144,17 @@ footer small:after,
 .push-btm {
   margin-bottom: 40px; }
 
-/* line 29, ../../sass/_helpers/_classes.scss */
+/* line 30, ../../sass/_helpers/_classes.scss */
 .push-btm-half {
   margin-bottom: 20px; }
+
+/* line 32, ../../sass/_helpers/_classes.scss */
+.hide-mobile {
+  display: none; }
+  @media (min-width: 768px) {
+    /* line 32, ../../sass/_helpers/_classes.scss */
+    .hide-mobile {
+      display: block; } }
 
 /* line 3, ../../sass/_helpers/_extends.scss */
 section, .events-list .current-event, footer small, .menu-items,

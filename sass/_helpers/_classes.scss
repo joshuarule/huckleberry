@@ -26,4 +26,13 @@
 }
 
 .push-btm       {margin-bottom: 40px;}
+
 .push-btm-half  {margin-bottom: 20px;}
+
+.hide-mobile {
+  display: none;
+
+  @include breakpoint($break) {
+    display: block;
+  }
+}
