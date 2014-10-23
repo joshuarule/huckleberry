@@ -32,6 +32,16 @@ $(function() {
 
 });
 
+// scrollto function
+
+$.fn.scrollView = function () {
+  return this.each(function () {
+    $('html, body').animate({
+      scrollTop: $(this).offset().top - 80
+    }, 1000);
+  });
+};
+
 $(document).ready(function(){
 
   // menu link redirects to menu/cocktails
@@ -52,7 +62,16 @@ $(document).ready(function(){
       $("body").addClass("js-menu-open");
     }
   });
+
+  // scrollto hours
+
+  $('a[href*="/hours"]').click(function(e){
+    e.preventDefault();
+    $('#hours').scrollView();
+  });
 })
+
+
 
 // $(function() {
 //   FastClick.attach(document.body);
