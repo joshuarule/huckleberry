@@ -1,0 +1,53 @@
+.eventsDetail {
+  @extend %cf;
+
+  .eventImg {
+    padding-bottom: 70%;
+    margin-bottom: $base-spacing-unit;
+    background-repeat: none;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .eventMain {
+    // outline: 1px solid red;
+    overflow: hidden;
+    margin-bottom: $dbl-spacing-unit;
+
+    .eventImg {
+      @include breakpoint($break) {
+        @include span(6);
+        margin-bottom: 0;
+        padding-bottom: 50%;
+      }
+    }
+
+    .eventInfo {
+      @include breakpoint($break) {
+        @include span(6);
+        margin-right: 0;
+      }
+    }
+  }
+
+  .eventSecondary {
+    // outline: 1px solid blue;
+    margin-bottom: $dbl-spacing-unit;
+    
+    @include breakpoint($break) {
+      @include span(4);
+    }
+    
+    a {
+      display: block;
+    }
+
+    &.last {
+      margin-right: 0;
+    }
+  }
+
+  li:nth-child(3n+4) {
+    margin-right: 0; 
+  }
+}

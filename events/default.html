@@ -1,18 +1,43 @@
 {% capture content %}
 
-  <pre>events/default.html template</pre>
+  <pre>events/index.html template</pre>
+  
+  <div class="wrapper">
 
-  <h1>{{title}}</h1>
+    <main>
 
-  {{body}}
-    <ul>
-    {% for post in posts %}
-      <li>
-        <h2>{{post.title}}</h2>
-        <p>{{post.body}}</p>
-      </li>
-    {% endfor %}
-    </ul>
+      <ul class="eventsDetail">
+
+        <li class="eventMain">
+          <div class="eventImg" style="background-image: url('{{assets.first.url}}')"></div>
+          <div class="eventInfo">
+            <span class="title">{{ url | split:"/" | last | capitalize}}</span>
+            <h1 class="h3">{{title}}</h1>
+            <p class="flush-bottom">{{body}}</p>
+          </div>
+          
+        </li>
+
+        {% for post in parent.posts %}
+
+          {% if post.url != url %}
+
+            {% capture indexNum %}{{ forloop.index | modulo:3 }}{% endcapture %}
+
+            <li class="eventSecondary">
+              <div class="eventImg" style="background-image: url('{{post.assets.first.url}}')"></div>
+              <span class="title">{{ post.url | split:"/" | last | capitalize}}</span>
+              <h2 class="h5 flush-btm">{{post.title}}</h2>
+              <div class="eventExcerpt">{{post.excerpt | truncatewords: 13, '...'}}</div> 
+              <a href="{{post.url}}">Read More</a>
+            </li>
+
+          {% endif %}
+        {% endfor %}
+      </ul>
+
+    </main>
+  </div>
 
 {% endcapture %}
 
