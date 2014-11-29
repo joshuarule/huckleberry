@@ -537,12 +537,15 @@ footer nav .social {
       float: left;
       margin-right: 2.12766%; } }
   /* line 41, ../../sass/elements/_events-detail.scss */
+  .eventsDetail .eventSecondary .eventExcerpt p {
+    margin-bottom: 0; }
+  /* line 45, ../../sass/elements/_events-detail.scss */
   .eventsDetail .eventSecondary a {
     display: block; }
-  /* line 45, ../../sass/elements/_events-detail.scss */
+  /* line 49, ../../sass/elements/_events-detail.scss */
   .eventsDetail .eventSecondary.last {
     margin-right: 0; }
-/* line 50, ../../sass/elements/_events-detail.scss */
+/* line 54, ../../sass/elements/_events-detail.scss */
 .eventsDetail li:nth-child(3n+4) {
   margin-right: 0; }
 
@@ -821,9 +824,10 @@ footer small {
     right: 60px;
     top: 60px; }
 
-/* line 34, ../../sass/elements/_homepage-sections.scss */
-.info {
-  margin-top: 90px; }
+@media (min-width: 768px) {
+  /* line 34, ../../sass/elements/_homepage-sections.scss */
+  .info {
+    margin-top: 90px; } }
 
 @media (min-width: 0) and (max-width: 767px) {
   /* line 1, ../../sass/elements/_hours.scss */

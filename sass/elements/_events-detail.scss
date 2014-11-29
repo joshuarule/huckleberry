@@ -37,6 +37,10 @@
     @include breakpoint($break) {
       @include span(4);
     }
+
+    .eventExcerpt p {
+      margin-bottom: 0;
+    }
     
     a {
       display: block;

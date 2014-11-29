@@ -1,5 +1,11 @@
 .*
+*.scss
+_DOCS/
 _DOCS/*
 node_modules/*
-sass/*
+sass/**/*
 js/*
+package.json
+gruntfile.js
+config.ru
+config.rb

@@ -32,6 +32,7 @@
 
 
 .info {
-  // display: none;
-  margin-top: 90px;
+  @include breakpoint($break) {
+    margin-top: 90px;
+  }
 }

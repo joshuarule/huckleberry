@@ -31,8 +31,8 @@
           
           <div class="eventImg" style="background-image: url('{{post.assets.first.url}}')"></div>
           <span class="title">{{ post.url | split:"/" | last | capitalize}}</span>
-          <h2 class="h5">{{post.title}}</h2>
-          <p>{{post.excerpt | truncatewords: 13, '...'}}</p>
+          <h2 class="h5 flush-btm">{{post.title}}</h2>
+          <div class="eventExcerpt">{{post.excerpt | truncatewords: 13, '...'}}</div>
           <a href="{{post.url}}">Read More</a>
         </li>
 
