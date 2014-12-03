@@ -2,6 +2,10 @@
   display: none;
 }
 
+.clear {
+	clear: both;
+}
+
 .cf,
 %cf {
   &:after {
@@ -38,3 +42,4 @@
     display: block;
   }
 }
+
