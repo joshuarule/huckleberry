@@ -1,0 +1,43 @@
+.social-wrap {
+  position: absolute;
+  top: -220px;
+  right: 0;
+}
+
+.social {
+  position: fixed;
+  width: span(1);
+  z-index: 2;
+
+  li {
+    position: relative;
+    margin-bottom: 20px;
+    width: 100%;
+    padding-bottom: 100%;
+  }
+
+  a {
+    position: absolute;
+    left:   0;
+    right:  0;
+    top:    0;
+    bottom: 0;
+    // height: 140px;
+    // width:  140px;
+    background: $red;
+    display: block;
+
+    &:hover {
+      background: darken($red, 10%);
+    }
+  }
+
+  svg {
+    width:  50%;
+    height: 50%;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,50%);
+  }
+}

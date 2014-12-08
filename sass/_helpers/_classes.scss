@@ -24,9 +24,18 @@
   text-align: center;
 }
 
+.pad-top {
+  padding-top: 40px !important;
+}
+
 .pad-btm {
-  margin-bottom: 40px; 
+  padding-bottom: 40px;
   outline: 1px solid red;
+}
+
+.page-padding {
+  padding-top:    40px !important;
+  padding-bottom: 40px !important;
 }
 
 .flush-btm {margin-bottom: 0;}

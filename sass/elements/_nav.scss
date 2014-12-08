@@ -2,15 +2,6 @@
 
 .is-current-page {
 
-  footer &,
-  header & {
-    color: $red;
-
-    &:hover {
-      cursor: default;
-    }
-  }
-
   .nav-menu & {
     background: $red !important;
     position: relative;
@@ -35,7 +26,6 @@
       cursor: default;
     }
   }
-  
 }
 
 .nav-main {
@@ -141,6 +131,14 @@
         opacity: 1;
       }
     }
+
+    a.is-current-page {
+      color: $red;
+
+      &:hover {
+        cursor: default;
+      }
+    }
   }
 }
 
@@ -149,8 +147,13 @@
 .nav-menu {
   display: block;
   text-align: center;
-  padding-top:   60px;
-  margin-bottom: 80px;
+  padding-top:   40px;
+  margin-bottom: 20px;
+
+  @include breakpoint($break) {
+    padding-top:   60px;
+    margin-bottom: 50px;
+  }
 
   ul {
     display: inline-block;

@@ -12,7 +12,7 @@
   .eventMain {
     // outline: 1px solid red;
     overflow: hidden;
-    margin-bottom: $dbl-spacing-unit;
+    margin-bottom: $dbl-spacing-unit * 2;
 
     .eventImg {
       @include breakpoint($break) {

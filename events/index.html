@@ -11,15 +11,15 @@
     {{body}}
 
     <ul class="eventsDetail">
-      {% for post in posts %}
+      {% for page in pages %}
 
         {% if forloop.first == true %}
 
         <li class="eventMain">
-          <div class="eventImg" style="background-image: url('{{post.assets.first.url}}')"></div>
-          <span class="title">{{ post.url | split:"/" | last | capitalize}}</span>
-          <h1 class="h3">{{post.title}}</h1>
-          {{post.body}}
+          <div class="eventImg" style="background-image: url('{{page.assets.first.url}}')"></div>
+          <span class="title">{{ page.url | split:"/" | last | capitalize}}</span>
+          <h1 class="h3">{{page.title}}</h1>
+          {{page.body}}
         </li>
           
         {% else %}
@@ -29,11 +29,12 @@
 
         <li class="eventSecondary{% if indexNum == '1' %} last{% endif %}">
           
-          <div class="eventImg" style="background-image: url('{{post.assets.first.url}}')"></div>
-          <span class="title">{{ post.url | split:"/" | last | capitalize}}</span>
-          <h2 class="h5 flush-btm">{{post.title}}</h2>
-          <div class="eventExcerpt">{{post.excerpt | truncatewords: 13, '...'}}</div>
-          <a href="{{post.url}}">Read More</a>
+          
+          <span class="title">{{ page.url | split:"/" | last | capitalize}}</span>
+          <div class="eventImg" style="background-image: url('{{page.assets.first.url}}')"></div>
+          <h2 class="h5 flush-btm">{{page.title}}</h2>
+          <div class="eventExcerpt">{{page.excerpt | truncatewords: 13, '...'}}</div>
+          <a href="{{page.url}}">Read More</a>
         </li>
 
         {% endif %}

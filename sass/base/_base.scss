@@ -31,10 +31,6 @@ main {
 }
 
 header {
-  // margin-top:    40px;
-  // margin-bottom: 40px; // $fix
-  // padding-left:  40px;
-  // padding-right: 40px;
 }
 
 footer {
@@ -74,26 +70,23 @@ strong {
 nav {
   display: inline-block;
 
-  ul {
+  li {
+    display: inline-block;
+  }
 
-    li {
-      display: inline-block;
+  a {
+    display: block;
+    color: $white;
+    text-decoration: none;
+    padding: 0 10px 9px 10px;
+    transition: color .2s;
+    
+    &:hover {
+      color: $red;
+    }
 
-      a {
-        display: block;
-        color: $white;
-        text-decoration: none;
-        padding: 0 10px 9px 10px;
-        transition: color .2s;
-        
-        &:hover {
-          color: $red;
-        }
-
-        @include breakpoint(1100px) {
-          padding: 0 23px 9px 23px;
-        }
-      }
+    @include breakpoint(1100px) {
+      padding: 0 23px 9px 23px;
     }
   }
 }

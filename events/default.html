@@ -18,18 +18,18 @@
           
         </li>
 
-        {% for post in parent.posts %}
+        {% for page in parent.pages %}
 
-          {% if post.url != url %}
+          {% if page.url != url %}
 
             {% capture indexNum %}{{ forloop.index | modulo:3 }}{% endcapture %}
 
             <li class="eventSecondary">
-              <div class="eventImg" style="background-image: url('{{post.assets.first.url}}')"></div>
-              <span class="title">{{ post.url | split:"/" | last | capitalize}}</span>
-              <h2 class="h5 flush-btm">{{post.title}}</h2>
-              <div class="eventExcerpt">{{post.excerpt | truncatewords: 13, '...'}}</div> 
-              <a href="{{post.url}}">Read More</a>
+              <a href="{{page.url}}"><div class="eventImg" style="background-image: url('{{page.assets.first.url}}')"></div></a>
+              <span class="title">{{ page.url | split:"/" | last | capitalize}}</span>
+              <h2 class="h5 flush-btm">{{page.title}}</h2>
+              <div class="eventExcerpt">{{page.excerpt | truncatewords: 13, '...'}}</div> 
+              <a href="{{page.url}}">Read More</a>
             </li>
 
           {% endif %}

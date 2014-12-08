@@ -34,57 +34,58 @@
 
   <div class="wrapper">
 
-  <div class="container">
+    <div class="container menu-wrap">
 
-    <pre>menu/default.html</pre>
+      <pre>menu/default.html</pre>
 
-    {% include 'includes/nav-menu' %}
+      {% include 'includes/nav-menu' %}
 
-    {% if url == '/menu/happy-hour' %}
-      <div class="happy-hour">
-        {% for post in posts  %}
-          <h2>{{post.title}}</h2>
-          <p>{{post.body}}</p>
-        {% endfor %}
-      </div>
-    {% endif %}
+      {% if url == '/menu/happy-hour' %}
+        <div class="happy-hour">
+          {% for post in posts  %}
+            <h2>{{post.title}}</h2>
+            <p>{{post.body}}</p>
+          {% endfor %}
+        </div>
+      {% endif %}
 
-    {% if url != '/menu/happy-hour' %}
+      {% if url != '/menu/happy-hour' %}
 
-      <ul class="menu-items third-1">
-      {% for set in taxonomy %}
-        {% for tag in set %}
-          {% unless tag == "luxurybox" %}
-            <li>
-              <h1 class="category-title">{{tag.value}}</h1>
-            </li>
-            {% for post in tag.posts %}
-              <li class="item">
-                <h2 class="item-title">{{post.title}}</h2>
-                {{post.body}}
+        <ul class="menu-items third-1">
+        {% for set in taxonomy %}
+          {% for tag in set %}
+            {% unless tag == "luxurybox" %}
+              <li>
+                <h1 class="category-title">{{tag.value}}</h1>
               </li>
-            {% endfor %}
-          {% endunless%}
+              {% for post in tag.posts %}
+                <li class="item">
+                  <h2 class="item-title">{{post.title}}</h2>
+                  {{post.body}}
+                </li>
+              {% endfor %}
+            {% endunless%}
+          {% endfor %}
         {% endfor %}
-      {% endfor %}
-      </ul>
-      <ul class="menu-items third-2"></ul>
-      <ul class="menu-items third-3">
-          {% if taxonomy.tags.luxurybox.posts %}
-            <li><h1 class="category-title">Luxury Box</h1></li>
-            {% for post in taxonomy.tags.luxurybox.posts %}
-              <li class="item">
-                <h2 class="item-title">{{post.title}}</h2>
-                {{post.body}}
-              </li>
-            {% endfor %}
-          {% endif %}
-      </ul>
-      <div class="cf"></div>
+        </ul>
+        <ul class="menu-items third-2"></ul>
+        <ul class="menu-items third-3">
+            {% if taxonomy.tags.luxurybox.posts %}
+              <li><h1 class="category-title">Luxury Box</h1></li>
+              {% for post in taxonomy.tags.luxurybox.posts %}
+                <li class="item">
+                  <h2 class="item-title">{{post.title}}</h2>
+                  {{post.body}}
+                </li>
+              {% endfor %}
+            {% endif %}
+            <!-- <div class="cf"></div> -->
+        </ul>
+        
 
-    {% endif %}
+      {% endif %}
 
-  </div>
+    </div>
 
   </div>
 

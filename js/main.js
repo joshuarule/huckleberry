@@ -42,6 +42,12 @@ $.fn.scrollView = function () {
   });
 };
 
+var d   = new Date();
+var day = d.getDay(); // returns a # 0 - 6
+var dayName = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+var today = dayName[day];
+
+
 $(document).ready(function(){
 
   // menu link redirects to menu/cocktails
@@ -51,9 +57,14 @@ $(document).ready(function(){
     window.location.href = "/menu/cocktails";
   });
 
-  // menu toggle
+  $("a[href='/events']").on('click', function(e){
+    e.preventDefault();
+    window.location.href = "/events/" + today.toLowerCase();
+  });
 
-  $("#push").on('click', function() {
+  // menu toggle
+  // 
+  var toggleMenu = function () {
     if ($("body").hasClass("js-menu-open")) {
       $("body").removeClass("js-menu-open");
       $("body").addClass("js-menu-closed");
@@ -61,13 +72,20 @@ $(document).ready(function(){
       $("body").removeClass("js-menu-closed");
       $("body").addClass("js-menu-open");
     }
+    console.log("toggleMenu");
+  }
+
+  $("#push").on('click', function() {
+    toggleMenu();
   });
 
   // scrollto hours
 
   $('a[href*="/hours"]').click(function(e){
+    toggleMenu();
     e.preventDefault();
     $('#hours').scrollView();
+
   });
 })
 
