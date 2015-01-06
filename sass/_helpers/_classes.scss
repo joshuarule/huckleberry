@@ -52,3 +52,7 @@
   }
 }
 
+.italic,
+.italic > * {
+  font-family: $alt-font-family;
+}

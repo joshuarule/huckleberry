@@ -1,14 +1,25 @@
-.intro {
-  // padding-bottom: 650px;
+// this controls the intro section
+
+.intro .col-5 {
+  @include breakpoint($break0) {
+    margin-bottom: 40px;
+  }
 }
 
 .intro-img-1 {
-  @include span(5 at 7);
-  margin-top: -100px;
+  position: relative;
+  float: right;
+  width: 40%;
+  @include breakpoint($break) {
+    @include span(5 at 7);
+    margin-top: -100px;
+  }
 }
 
 .intro-img-2 {
-  clear: both;
+  @include breakpoint($break) {
+    clear: both;
+  }
   @include span(9 at 1);
   position: relative;
   margin-top: 60px;

@@ -1,6 +1,5 @@
 .container,
 %container {
   position: relative;
-  @include container(1700px);
-
+  @include container(1450px);
 }

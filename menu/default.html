@@ -36,16 +36,11 @@
 
     <div class="container menu-wrap">
 
-      <pre>menu/default.html</pre>
-
       {% include 'includes/nav-menu' %}
 
       {% if url == '/menu/happy-hour' %}
-        <div class="happy-hour">
-          {% for post in posts  %}
-            <h2>{{post.title}}</h2>
-            <p>{{post.body}}</p>
-          {% endfor %}
+        <div class="happy-hour cf">
+          {{body}}
         </div>
       {% endif %}
 
@@ -61,7 +56,10 @@
               {% for post in tag.posts %}
                 <li class="item">
                   <h2 class="item-title">{{post.title}}</h2>
-                  {{post.body}}
+                  {% if url == '/menu/wine' %}<div class="italic">{{post.body}}</div>
+                  {% else %}
+                    {{post.body}}
+                  {% endif %}
                 </li>
               {% endfor %}
             {% endunless%}

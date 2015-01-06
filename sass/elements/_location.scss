@@ -4,9 +4,9 @@
     margin-bottom: $dbl-spacing-unit;
   }
 
-  .map {
-    display: none;
-  }
+  // .map {
+  //   // display: none;
+  // }
 
   @include breakpoint($break) {
     float: right;

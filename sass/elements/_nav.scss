@@ -36,7 +36,7 @@
 
   @include breakpoint($menu-break0) {
     visibility: hidden;
-    z-index: 2;
+    z-index: 3;
     top: $header-height-mbl;
     height: 100%;
     left: 0;

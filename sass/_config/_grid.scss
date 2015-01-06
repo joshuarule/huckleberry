@@ -26,22 +26,17 @@ $susy: (
 
 .half {
   @include span(6 at 1);
-  // @include clearfix;
 }
 
-
-// %half-right,
-// .half-right {
-//   @include grid-span(4,1);
-//   @include breakpoint($break)  {@include grid-span(4,5);}
-//   @include breakpoint($break2) {@include grid-span(6,7);}
-// }
+.half--last {
+  @include span(6 at 7);
+}
 
 %col-5,
 .col-5 {
-  @include span(5 at 1);
-  // @include breakpoint($break)  {@include grid-span(4,1);}
-  // @include breakpoint($break2) {@include grid-span(5,1);}
+  @include breakpoint($break) {
+    @include span(5 at 1);
+  }
 }
 
 %col-5-7,
@@ -49,40 +44,10 @@ $susy: (
   @include span(5 at 7);
 }
 
-// .col-1 {
-//   @include float-span(1, 1);
-//   background: green;
-//   height: 20px;
-//   margin-bottom: 20px;
-
-//   @include breakpoint($break2) {
-//     @include float-span(1, 1);
-//   }
-// }
-
-// .col-1-last {
-//   @include float-span(1, 'last');
-//   background: green;
-//   height: 20px;
-//   margin-bottom: 20px;
-
-//   @include breakpoint($break2) {
-//     @include float-span(1, 'last');
-//   }
-// }
-
-// .last {
-//   float: right;
-//   margin-right: 0;
-// }
-
-
-
 .span-8 {
    @include breakpoint($break) {
     @include span(8 at 1);
   }
-  
 }
 
 .span-3-10 {

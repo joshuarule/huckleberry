@@ -1,9 +1,19 @@
-.events .half {
-  background: #262734;
+.events > div {
+
+  @include breakpoint($break) {
+    @include span(6 at 7);
+  }
 
   @include breakpoint($break2) {
     padding-left:  20px;
     padding-right: 20px;
+  }
+
+  &:last-child {
+    background: #262734;
+    @include breakpoint($break) {
+      @include span(6 at 1);
+    }
   }
 }
 
@@ -25,20 +35,29 @@
     @extend .h6;
   }
 
-  .current-event,
-  .future-event {
-    @include breakpoint($break0) {
-      @include span(4 at 1);
-    }
+  .current-event {
+    
   }
 
   .current-event-title {
+    @include breakpoint ($break2) {
+      padding-left: 0;
+    }
     margin-bottom: 20px;
   }
 
   .current-event {
-    margin-bottom: 80px;
+    margin-bottom: 60px;
+    padding: 0 20px 20px 20px;
     @extend %cf;
+
+    @include breakpoint($break) {
+      margin-bottom: 80px;
+    }
+
+    @include breakpoint($break2) {
+      padding: 0;
+    }
 
     h1 { // current day
       display: inline;
@@ -50,6 +69,7 @@
     img {
       display: block;
       width: 100%;
+      margin-bottom: 20px;
       @include breakpoint($break2) {
         @include span(3 at 1 of 6);
       }
@@ -63,10 +83,11 @@
   }
 
   .future-event {
-    padding: 20px 20px 20px 0;
-    margin-bottom: 20px;
+    padding: 20px;
+    margin-bottom: 60px;
     position: relative;
     @include breakpoint($break2) {
+      padding: 20px 20px 20px 0;
       @include span(3 at 1 of 6);
     }
 
@@ -85,7 +106,7 @@
     span {
       position: absolute;
       top: -31px;
-      left: 0;
+      left: 20px;
     }
 
     h1 { // upcoming day - title
@@ -100,9 +121,23 @@
       margin: 0;
     }
 
-    &:last-child {
-      padding: 20px 0 20px 20px;
+    &:first-child {
       @include breakpoint($break2) {
+        margin-bottom: 20px;
+      }
+
+
+      span {
+        @include breakpoint($break2) {
+          left: 0;
+        }
+      }
+    }
+
+    &:last-child {
+      margin-bottom: 20px;
+      @include breakpoint($break2) {
+        padding: 20px 0 20px 20px;
         @include span(3 at 4 of 6);
       }
 

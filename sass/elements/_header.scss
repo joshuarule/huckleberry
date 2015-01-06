@@ -17,11 +17,11 @@
     margin-top: -5px; // magic number
     height: 60px;
     width:  60px;
-    fill: #262734;
+    fill: $red;
     transition: fill .2s;
 
     &:hover {
-      fill: $red;
+      fill: $orange;
     }
 
     @include breakpoint($menu-break) {

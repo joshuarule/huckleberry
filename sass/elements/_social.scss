@@ -1,13 +1,15 @@
-.social-wrap {
-  position: absolute;
-  top: -220px;
-  right: 0;
-}
 
 .social {
-  position: fixed;
-  width: span(1);
+  display: none;
+  position: absolute;
+  margin-top: 20px;
+  right: 0;
+  width: 74px;
   z-index: 2;
+
+  @include breakpoint($break) {
+    display: block;
+  }
 
   li {
     position: relative;
@@ -22,8 +24,6 @@
     right:  0;
     top:    0;
     bottom: 0;
-    // height: 140px;
-    // width:  140px;
     background: $red;
     display: block;
 
