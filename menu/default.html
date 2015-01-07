@@ -32,56 +32,60 @@
 
 <div class="menu-bg" style="background-image: url('/assets/img/menu-bg.jpg')">
 
+  {% include 'includes/nav-menu' %}
+
   <div class="wrapper">
 
-    <div class="container menu-wrap">
+    <div class="menu-wrap">
 
-      {% include 'includes/nav-menu' %}
+      <div class="container">
 
-      {% if url == '/menu/happy-hour' %}
-        <div class="happy-hour cf">
-          {{body}}
-        </div>
-      {% endif %}
+        {% if url == '/menu/happy-hour' %}
+          <div class="happy-hour cf">
+            {{body}}
+          </div>
+        {% endif %}
 
-      {% if url != '/menu/happy-hour' %}
+        {% if url != '/menu/happy-hour' %}
 
-        <ul class="menu-items third-1">
-        {% for set in taxonomy %}
-          {% for tag in set %}
-            {% unless tag == "luxurybox" %}
-              <li>
-                <h1 class="category-title">{{tag.value}}</h1>
-              </li>
-              {% for post in tag.posts %}
-                <li class="item">
-                  <h2 class="item-title">{{post.title}}</h2>
-                  {% if url == '/menu/wine' %}<div class="italic">{{post.body}}</div>
-                  {% else %}
-                    {{post.body}}
-                  {% endif %}
+          <ul class="menu-items third-1">
+          {% for set in taxonomy %}
+            {% for tag in set %}
+              {% unless tag == "luxurybox" %}
+                <li>
+                  <h1 class="category-title">{{tag.value}}</h1>
                 </li>
-              {% endfor %}
-            {% endunless%}
+                {% for post in tag.posts %}
+                  <li class="item">
+                    <h2 class="item-title">{{post.title}}</h2>
+                    {% if url == '/menu/wine' %}<div class="italic">{{post.body}}</div>
+                    {% else %}
+                      {{post.body}}
+                    {% endif %}
+                  </li>
+                {% endfor %}
+              {% endunless%}
+            {% endfor %}
           {% endfor %}
-        {% endfor %}
-        </ul>
-        <ul class="menu-items third-2"></ul>
-        <ul class="menu-items third-3">
-            {% if taxonomy.tags.luxurybox.posts %}
-              <li><h1 class="category-title">Luxury Box</h1></li>
-              {% for post in taxonomy.tags.luxurybox.posts %}
-                <li class="item">
-                  <h2 class="item-title">{{post.title}}</h2>
-                  {{post.body}}
-                </li>
-              {% endfor %}
-            {% endif %}
-            <!-- <div class="cf"></div> -->
-        </ul>
-        
+          </ul>
+          <ul class="menu-items third-2"></ul>
+          <ul class="menu-items third-3">
+              {% if taxonomy.tags.luxurybox.posts %}
+                <li><h1 class="category-title">Luxury Box</h1></li>
+                {% for post in taxonomy.tags.luxurybox.posts %}
+                  <li class="item">
+                    <h2 class="item-title">{{post.title}}</h2>
+                    {{post.body}}
+                  </li>
+                {% endfor %}
+              {% endif %}
+              <!-- <div class="cf"></div> -->
+          </ul>
+          
 
-      {% endif %}
+        {% endif %}
+
+      </div>
 
     </div>
 

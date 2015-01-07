@@ -1,30 +1,10 @@
 // active link for current page
 
-.is-current-page {
-
+.is-current-page a {
   .nav-menu & {
     background: $red !important;
-    position: relative;
-
-    &:after { // down arrow
-      $size: 14px;
-      position: absolute;
-      content: '';
-      z-index: 1;
-      bottom: -$size - 2px; // size - border size
-      width: 0;
-      height: 0;
-      border-left:  $size solid transparent;
-      border-right: $size solid transparent;
-      border-top:   $size solid $red;
-      left: 50%;
-      margin-left: -($size); 
-    }
-
-    &:hover {
-      border-color: transparent !important;
-      cursor: default;
-    }
+    position: absolute;
+    width: 100%;
   }
 }
 
@@ -145,31 +125,115 @@
 // menu page nav
 
 .nav-menu {
+  position: fixed;
+  width: 100%;
+  padding-top: 45px; // leaves room for active page
+  height: 45px;
+  margin-bottom: 40px;
+  overflow: hidden;
+  position: relative;
   display: block;
-  text-align: center;
-  padding-top:   40px;
-  margin-bottom: 20px;
+  // margin-left:  -6.38298%;
+  // margin-right: -6.38298%;
+  
+  // padding-top:   40px;
+  // margin-bottom: 20px;
 
   @include breakpoint($break) {
+    position: relative;
+    top: auto;
+    height: auto;
+    width: auto;
+    text-align: center;
     padding-top:   60px;
     margin-bottom: 50px;
   }
 
+  .js-menuNav-open & {
+    height: auto;
+  }
+
   ul {
-    display: inline-block;
+    @include breakpoint($break) {
+      display: inline-block;
+    }
   }
 
   li {
-    margin-bottom: 20px;
+    display: block;
+    @include breakpoint($break) {
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+    
   }
 
   a {
-    @extend %btn;
+    display: block;
     background: $black;
+    @extend %btn;
+    padding: 10px 40px 3px 10px;
+
+    @include breakpoint($break){
+      padding: 10px 40px 3px 40px;
+    }
 
     &:hover {
       border-color: $white;
       color: $white;
+    }
+  }
+}
+
+.nav-menu .is-current-page {
+  position: absolute;
+  top: 0;
+  width: 100%;
+
+  @include breakpoint($break){
+    position: relative;
+    top: auto;
+    width: auto;
+  }
+
+  a {
+    position: relative;
+    background: $red !important; 
+  }
+
+  a:after { // down arrow
+    pointer-events: none;
+    $size: 10px;
+    position: absolute;
+    content: '';
+    z-index: 1;
+    bottom: 16px;
+    right: 15px; 
+    width: 0;
+    height: 0;
+    border-left:  $size solid transparent;
+    border-right: $size solid transparent;
+    border-top:   $size solid $white;
+    
+    .js-menuNav-open & {
+      border-bottom: $size solid $white;
+      border-top:    none;
+    }
+
+    @include breakpoint($break) {
+      $size: 14px;
+      bottom: -$size - 2px; // size - border size
+      border-left:  $size solid transparent;
+      border-right: $size solid transparent;
+      border-top:   $size solid $red;
+      right: 0;
+      left: 50%;
+      margin-left: -($size); 
+
+      &:hover {
+        border-color: transparent !important;
+        cursor: default;
+      }
     }
   }
 }

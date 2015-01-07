@@ -79,6 +79,21 @@ $(document).ready(function(){
     toggleMenu();
   });
 
+  var toggleMenuNav = function () {
+    if ($("body").hasClass("js-menuNav-open")) {
+      $("body").removeClass("js-menuNav-open");
+      $("body").addClass("js-menuNav-closed");
+    } else {
+      $("body").removeClass("js-menuNav-closed");
+      $("body").addClass("js-menuNav-open");
+    }
+    console.log("toggleMenuNav");
+  }
+
+  $("#pushMenuNav").on('click', function(e) {
+    toggleMenuNav();
+  });
+
   // scrollto hours
 
   $('a[href*="/hours"]').click(function(e){
